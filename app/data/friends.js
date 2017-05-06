@@ -10,6 +10,6 @@ let friends = [{
 	name: "Jason",
 	avatar: "http://static2.businessinsider.com/image/5654150584307663008b4ed8/this-tech-recruiter-owns-the-most-hipster-cat-on-instagram.jpg",
 	scores: [4,3,5,2,3,1,5,4,3,4]
-} ]
+} ];
 
-module.exports = friends
+module.exports = friends;

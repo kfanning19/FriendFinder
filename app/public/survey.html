@@ -12,12 +12,13 @@
     <!-- Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
-<div class="page-header">
-    <h2>Survey Questions</h2>
-</div>
-<div class="container">
-    <form class="col-xs-12">
-        <div class="row">
+
+<body>
+    <div class="page-header">
+        <h2>Survey Questions</h2>
+    </div>
+    <div class="container-fluid">
+        <form class="col-xs-12">
             <h3>About You</h3>
             <div class="form-group">
                 <label for="name">Name (required)</label>
@@ -27,292 +28,85 @@
                 <label for="avatar">Link to Picture of a Cat(required, because we love cats)</label>
                 <input type="text" class="form-control" id="avatar">
             </div>
-        </div>
-        <div class="row">
-            <h3> 1. If a cat falls asleep in your lap, how likely are you to get up? </h3>
-        </div>
-        <div class="row">
-            <div class="col-xs-2">
-                <p>The cat is getting dumped</p>
-            </div>
-            <div class="col-xs-4">
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5
-                </label>
-            </div>
-            <div class="col-xs-2">
-            	<p>Why would I get up? I have a cat in my lap.</p>
-            </div>
-        </div>
-                <div class="row">
-            <h3> 2. How frequently do you look at cat videos? </h3>
-        </div>
-        <div class="row">
-            <div class="col-xs-2">
-                <p>Never</p>
-            </div>
-            <div class="col-xs-4">
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5
-                </label>
-            </div>
-            <div class="col-xs-2">
-            	<p>All the time.</p>
-            </div>
-        </div>
-                <div class="row">
-            <h3> 3. If your date says they are allergic to cats and would never own one, how likely are you to go on a second date? </h3>
-        </div>
-        <div class="row">
-            <div class="col-xs-2">
-                <p>It's not a deal breaker.</p>
-            </div>
-            <div class="col-xs-4">
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5
-                </label>
-            </div>
-            <div class="col-xs-2">
-            	<p>I'd sneak out a bathroom window.</p>
-            </div>
-        </div>
-                <div class="row">
-            <h3> 4. You are visiting a friend who has a cat, how quickly will you go pet it? </h3>
-        </div>
-        <div class="row">
-            <div class="col-xs-2">
-                <p>Only if it comes up to me</p>
-            </div>
-            <div class="col-xs-4">
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5
-                </label>
-            </div>
-            <div class="col-xs-2">
-            	<p>I'd greet the cat before my friend, honestly.</p>
-            </div>
-        </div>
-                <div class="row">
-            <h3> 5. ? </h3>
-        </div>
-        <div class="row">
-            <div class="col-xs-2">
-                <p>The cat is getting dumped</p>
-            </div>
-            <div class="col-xs-4">
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5
-                </label>
-            </div>
-            <div class="col-xs-2">
-            	<p>Why would I get up? I have a cat in my lap.</p>
-            </div>
-        </div>
-                <div class="row">
-            <h3> 1. If a cat falls asleep in your lap, how likely are you to get up? </h3>
-        </div>
-        <div class="row">
-            <div class="col-xs-2">
-                <p>The cat is getting dumped</p>
-            </div>
-            <div class="col-xs-4">
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5
-                </label>
-            </div>
-            <div class="col-xs-2">
-            	<p>Why would I get up? I have a cat in my lap.</p>
-            </div>
-        </div>
-                <div class="row">
-            <h3> 1. If a cat falls asleep in your lap, how likely are you to get up? </h3>
-        </div>
-        <div class="row">
-            <div class="col-xs-2">
-                <p>The cat is getting dumped</p>
-            </div>
-            <div class="col-xs-4">
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5
-                </label>
-            </div>
-            <div class="col-xs-2">
-            	<p>Why would I get up? I have a cat in my lap.</p>
-            </div>
-        </div>
-                <div class="row">
-            <h3> 1. If a cat falls asleep in your lap, how likely are you to get up? </h3>
-        </div>
-        <div class="row">
-            <div class="col-xs-2">
-                <p>The cat is getting dumped</p>
-            </div>
-            <div class="col-xs-4">
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5
-                </label>
-            </div>
-            <div class="col-xs-2">
-            	<p>Why would I get up? I have a cat in my lap.</p>
-            </div>
-        </div>
-                <div class="row">
-            <h3> 1. If a cat falls asleep in your lap, how likely are you to get up? </h3>
-        </div>
-        <div class="row">
-            <div class="col-xs-2">
-                <p>The cat is getting dumped</p>
-            </div>
-            <div class="col-xs-4">
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5
-                </label>
-            </div>
-            <div class="col-xs-2">
-            	<p>Why would I get up? I have a cat in my lap.</p>
-            </div>
-        </div>
-                <div class="row">
-            <h3> 1. If a cat falls asleep in your lap, how likely are you to get up? </h3>
-        </div>
-        <div class="row">
-            <div class="col-xs-2">
-                <p>The cat is getting dumped</p>
-            </div>
-            <div class="col-xs-4">
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5
-                </label>
-            </div>
-            <div class="col-xs-2">
-            	<p>Why would I get up? I have a cat in my lap.</p>
-            </div>
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-</div>
-
-<body>
+            <h3>On a scale of 1-5, please rate your answers to the following questions: </h3>
+            <h4>1. If a cat falls asleep in your lap, how likely are you to get up?</h4>
+            <select class="form-control">
+                <option value="1">1- The cat is getting dumped</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5- Why would I get up? There is a cat in my lap</option>
+            </select>
+            <h4>2. You are on a date that seems to be going well. Then they mention that they hate cats and could never live with one. How likely are you to go on another date?</h4>
+            <select class="form-control">
+                <option value="1">1- Definitely! It's not a dealbreaker.</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5- I'm not even finishing this date. I'm sneaking out the bathroom window</option>
+            </select>
+            <h4>3. A friend asks if you could foster a litter of kittens. How likely are you to say yes?</h4>
+            <select class="form-control">
+                <option value="1">1- No way. That is way too much work.</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5- Of course I would, this sounds like heaven!</option>
+            </select>
+            <h4>4. A store comes out with a product you already own and you technically don't need another, but this one has a cat print on it. How likely are you to buy it?</h4>
+            <select class="form-control">
+                <option value="1">1- Absolutely not, that is a complete waste of money</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5- Absolutely, I would! Heck, I'd probably buy 3.</option>
+            </select>
+            <h4>5. </h4>
+            <select class="form-control">
+                <option value="1">1- The cat is getting dumped</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5- Why would I get up? There is a cat in my lap</option>
+            </select>
+            <select class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <select class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <select class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <select class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <select class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
 </body>
 
 </html>

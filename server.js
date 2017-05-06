@@ -16,6 +16,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // Routing
 require('./app/routing/apiRoutes.js')(app); 
 require('./app/routing/htmlRoutes.js')(app);
+app.use(express.static(path.join(__dirname, './app/public')));
 
 app.listen(PORT, function() {
   console.log("Server created on port " + PORT);
