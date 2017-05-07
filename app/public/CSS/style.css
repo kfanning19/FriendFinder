@@ -10,12 +10,27 @@ body {
     background-color: rgba(245, 245, 245, 0.85);
 }
 
-h4,
-select {
-    padding: 10px;
+h4 {
+    margin-top: 30px;
 }
 
-.btn{
-	margin: 12px;
-	width: 100%;
+.btn {
+    margin: 12px;
+    width: 100%;
+}
+
+img {
+    width: 200px;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+input #avatar{
+	border-bottom: 2px solid;
+	border-color: black;
+}
+#survey-btn{
+	margin-top: 30px;
 }
