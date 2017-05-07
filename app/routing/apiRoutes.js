@@ -2,12 +2,12 @@ let friends = require("../data/friends.js")
 
 module.exports = function(app) {
     app.get("/api/friends", (req, res) => {
-        response.json(friends)
+        res.json(friends)
     })
 
-    app.post("api/friends", function(req, res) {
+    app.post("/api/friends", function(req, res) {
         // Variable from user
-        let newFriend = res.body.scores;
+        let newFriend = req.body.scores;
      
         // Best Match variables
         let matchName = '';
