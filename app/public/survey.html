@@ -32,7 +32,7 @@
             </div>
             <h3>On a scale of 1-5, please rate your answers to the following questions: </h3>
             <h4>1. If a cat falls asleep in your lap, how likely are you to get up?</h4>
-            <select class="form-control">
+            <select class="form-control" id="q1">
                 <option value="1">1- The cat is getting dumped</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -40,7 +40,7 @@
                 <option value="5">5- Why would I get up? There is a cat in my lap</option>
             </select>
             <h4>2. You are on a date that seems to be going well. Then they mention that they hate cats and could never live with one. How likely are you to go on another date?</h4>
-            <select class="form-control">
+            <select class="form-control" id="q2">
                 <option value="1">1- Definitely! It's not a dealbreaker.</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -48,7 +48,7 @@
                 <option value="5">5- I'm not even finishing this date. I'm sneaking out the bathroom window</option>
             </select>
             <h4>3. A friend asks if you could foster a litter of kittens. How likely are you to say yes?</h4>
-            <select class="form-control">
+            <select class="form-control" id="q3">
                 <option value="1">1- No way. That is way too much work.</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -56,7 +56,7 @@
                 <option value="5">5- Of course I would, this sounds like heaven!</option>
             </select>
             <h4>4. A store comes out with a product you already own and you technically don't need another, but this one has a cat print on it. How likely are you to buy it?</h4>
-            <select class="form-control">
+            <select class="form-control" id="q4">
                 <option value="1">1- Absolutely not, that is a complete waste of money</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -64,7 +64,7 @@
                 <option value="5">5- Absolutely, I would! Heck, I'd probably buy 3.</option>
             </select>
             <h4>5. You are visiting a friend who owns a cat. How long would you wait before going to greet it?</h4>
-            <select class="form-control">
+            <select class="form-control" id="q5">
                 <option value="1">1- Only if it comes to me and doesn't give me a choice</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -72,7 +72,7 @@
                 <option value="5">5- I'd greet the cat before my friend</option>
             </select>
             <h4>6. How much time would you say you spend looking at cat videos?</h4>
-            <select class="form-control">
+            <select class="form-control" id="q6">
                 <option value="1">1- Rarely, if ever</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -80,7 +80,7 @@
                 <option value="5">5- All the time! They are adorable!</option>
             </select>
             <h4>7. You hear a cat cafe opened up the next town over. How likely are you to go?</h4>
-            <select class="form-control">
+            <select class="form-control" id="q7">
                 <option value="1">1- I'm not. That sounds unsanitary</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -88,7 +88,7 @@
                 <option value="5">5- Even if it is out of my way, I'm going there multiple times a week.</option>
             </select>
             <h4>8. If someone was looking at pictures on your phone, how many would be pictures of cats?</h4>
-            <select class="form-control">
+            <select class="form-control" id="q8">
                 <option value="1">1- Highly unlikely. Only if a cat photo-bombed a picture</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -96,7 +96,7 @@
                 <option value="5">5- So many that my phone has run out of memory</option>
             </select>
             <h4>9. If you had to choose between tickets to your favorite band's concert or playing with a room full of kittens, how likely would it be that you would choose to play with kittens?</h4>
-            <select class="form-control">
+            <select class="form-control" id="q9">
                 <option value="1">1- Not at all likely. I'm going to the concert.</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -104,16 +104,91 @@
                 <option value="5">5- That's a silly question- who wouldn't pick kittens?!</option>
             </select>
             <h4>10. And finally, how likely is it that your friends/family will refer to you as the crazy cat lady/man/person?</h4>
-            <select class="form-control">
+            <select class="form-control" id="q10">
                 <option value="1">1- Only if they are being sarcastic</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5- They already do this all the time</option>
             </select>
-            <button type="submit" class="btn btn-warning btn-lg">Submit</button>
+            <button type="submit" class="btn btn-warning btn-lg" id="survey-btn">Submit</button>
         </form>
     </div>
+    <footer class="footer">
+        <div class="container">
+            <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/kfanning19/friendfinder">GitHub Repo</a></p>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div id="resultsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title"><strong>Best Match</strong></h2>
+                </div>
+                <div class="modal-body">
+                    <h2 id="matchName"></h2>
+                    <img id="matchImg" src="" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    // Capture the form inputs 
+    $("#survey-btn").on("click", function() {
+
+        // Form validation
+        function validateForm() {
+            var isValid = true;
+            $('.form-control').each(function() {
+                if ($(this).val() === '')
+                    isValid = false;
+            });
+
+            $('.chosen-select').each(function() {
+
+                if ($(this).val() === "")
+                    isValid = false
+            })
+            return isValid;
+        }
+
+        // If all required fields are filled
+        if (validateForm() == true) {
+            // Create an object for the user's data
+            var userData = {
+                name: $("#name").val(),
+                photo: $("#avatar").val(),
+                scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+            }
+
+
+            // Grab the URL of the website
+            var currentURL = window.location.origin;
+
+            // AJAX post the data to the friends API. 
+            $.post(currentURL + "/api/friends", userData, function(data) {
+
+                // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                $("#matchName").text(data.name);
+                $('#matchImg').attr("src", data.avatar);
+
+                // Show the modal with the best match 
+                $("#resultsModal").modal('toggle');
+
+            });
+        } else {
+            alert("Please fill out all fields before submitting!");
+        }
+
+        return false;
+    });
+    </script>
 </body>
 
 </html>
