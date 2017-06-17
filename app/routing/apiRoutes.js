@@ -13,7 +13,7 @@ module.exports = function(app) {
         // Best Match variables
 
         let bestmatch = 0;
-        let totalDifference = 100; //greatest difference possible
+        let totalDifference = 50; //greatest difference possible
 
         // Loop through friends json
         for (var i = 0; i < friends.length; i++) {
